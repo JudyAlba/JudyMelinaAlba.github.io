@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --padding-container: 100px 0;
+    --color-title: #804000;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: var(--padding-container);
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    color: #fff;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url('../images/PORTADA001.JPG');
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    z-index: -1;
+}
+
+
+/* Nav */
+
+.nav {
+    --padding-container: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav__title {
+    font-weight: 700;
+}
+
+.nav__link {
+    margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+    font-weight: 400;
+    font-size: 1em;
+}
+
+.nav__items {
+    list-style: none;
+}
+
+.nav__links {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav__menu {
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+}
+
+.nav__img {
+    display: block;
+    width: 30px;
+}
+
+
+.nav__close {
+    display: var(--show, none);
+}
+
+
+/* Hero container */
+
+.hero__container {
+    max-width: 800px;
+    --padding-container: 0;
+    display: grid;
+    grid-auto-rows: max-content;
+    align-content: center;
+    gap: 1em;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.hero__title {
+    font-size: 3rem;
+}
+
+.hero__paragraph {
+    margin-bottom: 20px;
+}
+
+.cta {
+    display: inline-block;
+    background-color: #2091F9;
+    justify-self: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 32px;
+}
+.comprar {
+    display: inline-block;
+    background-color: #804000;
+    justify-self: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 32px;
+}
+
+/* About */
+
+.about {
+    text-align: center;
+}
+
+.subtitle {
+    color: #804000;
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+
+.about__paragraph {
+    line-height: 1.7;
+}
+
+.about__main {
+    padding-top: 80px;
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    gap: 1em;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+}
+
+
+.about__icons {
+    display: grid;
+    gap: 1em;
+    justify-items: center;
+    width: 260px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.about__icon {
+    width: 190px;
+}
+
+/* Knowledge */
+
+.knowledge {
+    text-align: center;
+    background-color: #ffffff;
+    opacity: 1;
+    background-image: radial-gradient(#b1897d 2px, #ffffff 2px);
+    background-size: 40px 40px;
+}
+.subtitle{
+    color: #804000;
+    font-size: 3rem;
+    margin-bottom: 25px;
+}
+
+
+.knowledge__container{
+    display: grid;
+    gap: 1em;
+    align-items: center;
+}
+
+
+.knowledge__paragraph{
+    line-height: 1.7;
+    margin-bottom: 15px;
+    font-size: 1em;
+
+}
+
+
+/* Footer */
+
+.footer{
+    background-color: #9a5833;
+}
+
+.footer__title{
+    font-weight: 500;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.footer__title {
+    color: #fff;
+}
+
+
+.footer__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 60px;
+}
+
+.hero__paragraph{
+    color: #fff;
+}
+
+.nav--footer{
+    padding-bottom: 20px;
+    display: grid;
+    gap: 1em;
+    grid-auto-flow: row;
+    height: 100%;
+}
+
+.nav__link--footer{
+    display: flex;
+    margin: 0;
+    margin-right: 20px;
+    flex-wrap: wrap;
+}
+
+
+.footer__copy{
+    --padding-container: 30px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.footer__copyright{
+    font-weight: 300;
+}
+
+.footer__icons{
+    margin-bottom: 12px;
+}
+
+.footer__img{
+    width: 30px;
+}
+
+/* Medias para adaptar dispositivo movil */
+
+@media (max-width:800px){
+    .nav__menu{
+        display: block;
+    }
+
+    .nav__link--menu{
+        position: fixed;
+        background-color: #000;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 100;
+        opacity: 0;
+        pointer-events: none;
+        transition: .7s opacity;
+    }
+
+    .nav__link--show{
+        --show: block;
+        opacity:1 ;
+        pointer-events: unset;
+    }
+
+    .nav__close{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 30px;
+        cursor: pointer;
+    }
+
+    .hero__title{
+        font-size: 2.5rem;
+    }
+
+
+    .about__main{
+        gap: 2em;
+    }
+
+    .about__icons:last-of-type{
+        grid-column: 1/-1;
+    }
+
+
+    .knowledge__container{
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content 1fr;
+        gap: 3em;
+        text-align: center;
+    }
+
+    .knowledge__picture{
+        grid-row: 1/2;
+        justify-self: center;
+    }
+    .about__icons{
+        margin-block: 30px;
+    }
+
+
+    .footer__container{
+        flex-wrap: wrap;
+    }
+
+    .nav--footer{
+        width: 100%;
+        justify-items: center;
+    }
+
+    .nav__link--footer{
+        width: 100%;
+        justify-content: space-evenly;
+        margin: 0;
+    }
+
+    .footer__form{
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .footer__input{
+        flex: 1;
+    }
+
+}
+
+@media (max-width:600px){
+    .hero__title{
+        font-size: 2rem;
+    }
+
+    .hero__paragraph{
+        font-size: 1rem;
+    }
+
+    .subtitle{
+        font-size: 1.8rem;
+    }
+
+    .about__icon{
+        gap: 2em;
+    }
+
+    .footer__title{
+        justify-self: start;
+        margin-bottom: 15px;
+    }
+
+    .nav--footer{
+        padding-bottom: 60px;
+    }
+
+    .nav__link--footer{
+        justify-content: space-between;
+    }
+
+
+}
