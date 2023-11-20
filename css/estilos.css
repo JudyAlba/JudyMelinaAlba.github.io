@@ -56,13 +56,14 @@ body {
 }
 
 .nav__link {
+
     margin-left: auto;
     padding: 0;
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: 2em;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1em;
 }
 
@@ -73,6 +74,9 @@ body {
 .nav__links {
     color: #fff;
     text-decoration: none;
+    margin-left: auto;
+    font-weight: 500;
+
 }
 
 .nav__menu {
@@ -349,15 +353,6 @@ body {
         width: 100%;
         justify-content: space-evenly;
         margin: 0;
-    }
-
-    .footer__form{
-        width: 100%;
-        justify-content: space-evenly;
-    }
-
-    .footer__input{
-        flex: 1;
     }
 
 }
